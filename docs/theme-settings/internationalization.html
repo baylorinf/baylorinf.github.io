@@ -81,8 +81,9 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="/js/third-party/math/mathjax.js" defer></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="/js/third-party/math/katex.js" defer></script>
 
 
 
@@ -177,7 +178,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Choosing-Language"><span class="nav-number">1.</span> <span class="nav-text">Choosing Language</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Multilingual-Switcher"><span class="nav-number">2.</span> <span class="nav-text">Multilingual Switcher</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Override-Default-Translations"><span class="nav-number">3.</span> <span class="nav-text">Override Default Translations</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#choosing-language"><span class="nav-number">1.</span> <span class="nav-text"> Choosing Language</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#multilingual-switcher"><span class="nav-number">2.</span> <span class="nav-text"> Multilingual Switcher</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#override-default-translations"><span class="nav-number">3.</span> <span class="nav-text"> Override Default Translations</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -320,9 +321,9 @@
       
       
       <div class="post-body">
-          <h3 id="Choosing-Language"><a href="#Choosing-Language" class="headerlink" title="Choosing Language"></a>Choosing Language</h3><p>Edit <mark class="label info">Hexo config file</mark>, set the value of <code>language</code> to the language you need. For example, English looks like this:</p>
+          <h3 id="choosing-language"><a class="markdownIt-Anchor" href="#choosing-language"></a> Choosing Language</h3>
+<p>Edit <mark class="label info">Hexo config file</mark>, set the value of <code>language</code> to the language you need. For example, English looks like this:</p>
 <figure class="highlight yml"><figcaption><span>Hexo config file</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">en</span></span><br></pre></td></tr></table></figure>
-
 <p>NexT now supports following languages:</p>
 <table>
 <thead>
@@ -332,7 +333,8 @@
 <th>Code</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>Arabic</td>
 <td>عربي</td>
 <td><code>ar</code></td>
@@ -447,22 +449,25 @@
 <td>Tiếng Việt</td>
 <td><code>vi</code></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <div class="note primary"><p>The files in the <code>language</code> directory are automatically generated, you do not need to modify them directly. Please submit translations via <span class="exturl" data-url="aHR0cHM6Ly9jcm93ZGluLmNvbS9wcm9qZWN0L2hleG8tdGhlbWUtbmV4dA==">Crowdin<i class="fa fa-external-link-alt"></i></span> if you would like to add or improve translation for NexT theme.</p>
 </div>
-
-<h3 id="Multilingual-Switcher"><a href="#Multilingual-Switcher" class="headerlink" title="Multilingual Switcher"></a>Multilingual Switcher</h3><p>Set multiple languages in <mark class="label info">Hexo config file</mark>, e.g.</p>
+<h3 id="multilingual-switcher"><a class="markdownIt-Anchor" href="#multilingual-switcher"></a> Multilingual Switcher</h3>
+<p>Set multiple languages in <mark class="label info">Hexo config file</mark>, e.g.</p>
 <figure class="highlight yml"><figcaption><span>Hexo config file</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">language:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">zh-CN</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">en</span></span><br></pre></td></tr></table></figure>
-
 <p>Then turn on <code>language_switcher</code> in <mark class="label primary">NexT config file</mark>:</p>
 <figure class="highlight yml"><figcaption><span>NexT config file</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Show multilingual switcher in footer.</span></span><br><span class="line"><span class="attr">language_switcher:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Override-Default-Translations"><a href="#Override-Default-Translations" class="headerlink" title="Override Default Translations"></a>Override Default Translations</h3><p>If you would like to customize the default translation, you do not need to modify the translation files in the <code>languages</code> directory. You can override all translations using <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZGF0YS1maWxlcw==">Data Files<i class="fa fa-external-link-alt"></i></span>.</p>
+<h3 id="override-default-translations"><a class="markdownIt-Anchor" href="#override-default-translations"></a> Override Default Translations</h3>
+<p>If you would like to customize the default translation, you do not need to modify the translation files in the <code>languages</code> directory. You can override all translations using <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZGF0YS1maWxlcw==">Data Files<i class="fa fa-external-link-alt"></i></span>.</p>
 <ol>
-<li><p>Create a <code>languages.yml</code> in <code>source/_data</code>.</p>
+<li>
+<p>Create a <code>languages.yml</code> in <code>source/_data</code>.</p>
 </li>
-<li><p>Insert following codes: (be careful about the two-space indent)</p>
- <figure class="highlight yml"><figcaption><span>languages.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># language</span></span><br><span class="line"><span class="attr">zh-CN:</span></span><br><span class="line">  <span class="comment"># items</span></span><br><span class="line">  <span class="attr">post:</span></span><br><span class="line">    <span class="attr">copyright:</span></span><br><span class="line">      <span class="comment"># the translation you prefer</span></span><br><span class="line">      <span class="attr">author:</span> <span class="string">本文博主</span></span><br><span class="line"><span class="attr">en:</span></span><br><span class="line">  <span class="attr">menu:</span></span><br><span class="line">    <span class="attr">schedule:</span> <span class="string">Calendar</span></span><br></pre></td></tr></table></figure></li>
+<li>
+<p>Insert following codes: (be careful about the two-space indent)</p>
+ <figure class="highlight yml"><figcaption><span>languages.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># language</span></span><br><span class="line"><span class="attr">zh-CN:</span></span><br><span class="line">  <span class="comment"># items</span></span><br><span class="line">  <span class="attr">post:</span></span><br><span class="line">    <span class="attr">copyright:</span></span><br><span class="line">      <span class="comment"># the translation you prefer</span></span><br><span class="line">      <span class="attr">author:</span> <span class="string">本文博主</span></span><br><span class="line"><span class="attr">en:</span></span><br><span class="line">  <span class="attr">menu:</span></span><br><span class="line">    <span class="attr">schedule:</span> <span class="string">Calendar</span></span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <p>This situation is also available for off-list items. For example, Next uses <a href="/docs/advanced-settings/injects.html">Theme Inject</a> to introduce the comments systems. You can rename the returned value in chinese as followed:</p>
 <figure class="highlight yml"><figcaption><span>languages.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># language</span></span><br><span class="line"><span class="attr">zh-CN:</span></span><br><span class="line">  <span class="comment"># items</span></span><br><span class="line">  <span class="attr">post:</span></span><br><span class="line">    <span class="attr">comments:</span></span><br><span class="line">      <span class="attr">disqus:</span> <span class="string">评论</span></span><br></pre></td></tr></table></figure>

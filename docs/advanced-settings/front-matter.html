@@ -81,8 +81,9 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="/js/third-party/math/mathjax.js" defer></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="/js/third-party/math/katex.js" defer></script>
 
 
 
@@ -177,7 +178,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Settings-Their-Default-Values"><span class="nav-number">1.</span> <span class="nav-text">Settings &amp; Their Default Values</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Undocumented-Front-matter-Variables"><span class="nav-number">2.</span> <span class="nav-text">Undocumented Front-matter Variables</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#settings-their-default-values"><span class="nav-number">1.</span> <span class="nav-text"> Settings &amp; Their Default Values</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undocumented-front-matter-variables"><span class="nav-number">2.</span> <span class="nav-text"> Undocumented Front-matter Variables</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -309,16 +310,16 @@
       
       <div class="post-body">
           <blockquote>
-<p>Front-matter is a block of YAML or JSON at the beginning of the file that is used to configure settings for your writings. Front-matter is terminated by three dashes when written in YAML or three semicolons when written in JSON.<br>— from <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZnJvbnQtbWF0dGVy">Hexo site<i class="fa fa-external-link-alt"></i></span>.</p>
+<p>Front-matter is a block of YAML or JSON at the beginning of the file that is used to configure settings for your writings. Front-matter is terminated by three dashes when written in YAML or three semicolons when written in JSON.<br />
+— from <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZnJvbnQtbWF0dGVy">Hexo site<i class="fa fa-external-link-alt"></i></span>.</p>
 </blockquote>
 <p><strong>YAML</strong></p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hello</span> <span class="string">World</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2013</span><span class="string">/7/13</span> <span class="number">20</span><span class="string">:46:25</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>JSON</strong></p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Hello World&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;date&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2013/7/13 20:46:25&quot;</span></span><br><span class="line">;;;</span><br></pre></td></tr></table></figure>
-
 <p>Next extends and provide more variables. It allows users to configure a single page.</p>
-<h3 id="Settings-Their-Default-Values"><a href="#Settings-Their-Default-Values" class="headerlink" title="Settings &amp; Their Default Values"></a>Settings &amp; Their Default Values</h3><table>
+<h3 id="settings-their-default-values"><a class="markdownIt-Anchor" href="#settings-their-default-values"></a> Settings &amp; Their Default Values</h3>
+<table>
 <thead>
 <tr>
 <th>Setting</th>
@@ -327,7 +328,8 @@
 <th>Default</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>author</code></td>
 <td><code>string</code></td>
 <td>Author name for post copyright</td>
@@ -417,12 +419,13 @@
 <td>Whether to add <code>noindex</code> in meta to disallow robots index.<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vc2VhcmNoL2RvY3MvY3Jhd2xpbmctaW5kZXhpbmcvYmxvY2staW5kZXhpbmc/dmlzaXRfaWQ9NjM4NjQ1NTY3ODE5Mzg5ODEzLTk3MDU2OTE4NiZyZD0xJmhsPXpoLWNu">block-indexing<i class="fa fa-external-link-alt"></i></span></td>
 <td><code>false</code></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>(1): They have the same structure as the options in <mark class="label primary">NexT config file</mark>.</p>
 <p><strong>Example</strong></p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">toc:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">number:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">max_depth:</span> <span class="number">3</span></span><br><span class="line"><span class="attr">reward_settings:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">comment:</span> <span class="string">Buy</span> <span class="string">me</span> <span class="string">a</span> <span class="string">coffee</span></span><br><span class="line"><span class="attr">quicklink:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">delay:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">timeout:</span> <span class="number">3000</span></span><br><span class="line">  <span class="attr">priority:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Undocumented-Front-matter-Variables"><a href="#Undocumented-Front-matter-Variables" class="headerlink" title="Undocumented Front-matter Variables"></a>Undocumented Front-matter Variables</h3><p>The following variables are not mentioned in the Hexo documentation, but are required by <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXRoZW1lLXVuaXQtdGVzdA==">hexo-theme-unit-test<i class="fa fa-external-link-alt"></i></span>.</p>
+<h3 id="undocumented-front-matter-variables"><a class="markdownIt-Anchor" href="#undocumented-front-matter-variables"></a> Undocumented Front-matter Variables</h3>
+<p>The following variables are not mentioned in the Hexo documentation, but are required by <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXRoZW1lLXVuaXQtdGVzdA==">hexo-theme-unit-test<i class="fa fa-external-link-alt"></i></span>.</p>
 <table>
 <thead>
 <tr>
@@ -431,7 +434,8 @@
 <th>Example</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>link</code></td>
 <td><code>string</code></td>
 <td><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXRoZW1lLXVuaXQtdGVzdC9ibG9iL21hc3Rlci9zb3VyY2UvX3Bvc3RzL2xpbmstcG9zdC5tZA==">link-post<i class="fa fa-external-link-alt"></i></span></td>
@@ -441,7 +445,8 @@
 <td><code>array</code></td>
 <td><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXRoZW1lLXVuaXQtdGVzdC9ibG9iL21hc3Rlci9zb3VyY2UvX3Bvc3RzL2dhbGxlcnktcG9zdC5tZA==">gallery-post<i class="fa fa-external-link-alt"></i></span></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 
       </div>
       

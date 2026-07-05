@@ -81,8 +81,9 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="/js/third-party/math/mathjax.js" defer></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="/js/third-party/math/katex.js" defer></script>
 
 
 
@@ -177,7 +178,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Usage"><span class="nav-number">1.</span> <span class="nav-text">Usage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples"><span class="nav-number">2.</span> <span class="nav-text">Examples</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#usage"><span class="nav-number">1.</span> <span class="nav-text"> Usage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#examples"><span class="nav-number">2.</span> <span class="nav-text"> Examples</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -332,18 +333,17 @@
       
       
       <div class="post-body">
-          <h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight jinja"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">linkgrid</span> [image] [delimiter] [comment] %&#125;</span><span class="language-xml"></span></span><br><span class="line"><span class="language-xml"></span><span class="template-tag">&#123;% <span class="name">endlinkgrid</span> %&#125;</span></span><br></pre></td></tr></table></figure>
-
+          <h3 id="usage"><a class="markdownIt-Anchor" href="#usage"></a> Usage</h3>
+<figure class="highlight jinja"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">linkgrid</span> [image] [delimiter] [comment] %&#125;</span><span class="language-xml"></span></span><br><span class="line"><span class="language-xml"></span><span class="template-tag">&#123;% <span class="name">endlinkgrid</span> %&#125;</span></span><br></pre></td></tr></table></figure>
 <p>or</p>
 <figure class="highlight jinja"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">lg</span> [image] [delimiter] [comment] %&#125;</span><span class="language-xml"></span></span><br><span class="line"><span class="language-xml"></span><span class="template-tag">&#123;% <span class="name">endlg</span> %&#125;</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li><code>[image]</code>     : <em>Optional parameter.</em> Default image URL.</li>
 <li><code>[delimiter]</code> : <em>Optional parameter.</em> If the optional delimiter parameter is given, it is interpreted as the delimiter of items in each line.</li>
 <li><code>[comment]</code>   : <em>Optional parameter.</em> If the optional comment parameter is given, it is interpreted as the symbol to comment out a line.</li>
 </ul>
-<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight jinja"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">linkgrid</span> %&#125;</span><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="language-xml">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="language-xml">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="language-xml">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="language-xml">% Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="language-xml"></span><span class="template-tag">&#123;% <span class="name">endlinkgrid</span> %&#125;</span></span><br></pre></td></tr></table></figure>
-
+<h3 id="examples"><a class="markdownIt-Anchor" href="#examples"></a> Examples</h3>
+<figure class="highlight jinja"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">linkgrid</span> %&#125;</span><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="language-xml">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="language-xml">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="language-xml">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="language-xml">% Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="language-xml"></span><span class="template-tag">&#123;% <span class="name">endlinkgrid</span> %&#125;</span></span><br></pre></td></tr></table></figure>
 <div class="link-grid"><div class="link-grid-container">
 <object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
 <p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
@@ -361,9 +361,7 @@
 <p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
 <a target="_blank" rel="noopener" href="https://theme-next.js.org/"></a>
 </div></div>
-
 <figure class="highlight jinja"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">lg</span> /images/apple-touch-icon-next.png , %&#125;</span><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">Theme NexT , https://theme-next.js.org/ , Stay Simple. Stay NexT. , /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="language-xml">Theme NexT , https://theme-next.js.org/ , Stay Simple. Stay NexT. , /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="language-xml">Theme NexT , https://theme-next.js.org/ , Stay Simple. Stay NexT. , /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="language-xml">% Theme NexT , https://theme-next.js.org/ , Stay Simple. Stay NexT. , /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="language-xml"></span><span class="template-tag">&#123;% <span class="name">endlg</span> %&#125;</span></span><br></pre></td></tr></table></figure>
-
 <div class="link-grid"><div class="link-grid-container">
 <object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
 <p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>

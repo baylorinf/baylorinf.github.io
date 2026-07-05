@@ -81,8 +81,9 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="/js/third-party/math/mathjax.js" defer></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="/js/third-party/math/katex.js" defer></script>
 
 
 
@@ -177,7 +178,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-Plugins"><span class="nav-number">1.</span> <span class="nav-text">Hexo Plugins</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NexT-Plugins"><span class="nav-number">2.</span> <span class="nav-text">NexT Plugins</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-plugins"><span class="nav-number">1.</span> <span class="nav-text"> Hexo Plugins</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#next-plugins"><span class="nav-number">2.</span> <span class="nav-text"> NexT Plugins</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -259,21 +260,23 @@
       
       
       <div class="post-body">
-          <h3 id="Hexo-Plugins"><a href="#Hexo-Plugins" class="headerlink" title="Hexo Plugins"></a>Hexo Plugins</h3><ul>
+          <h3 id="hexo-plugins"><a class="markdownIt-Anchor" href="#hexo-plugins"></a> Hexo Plugins</h3>
+<ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by1nZW5lcmF0b3Itc2VhcmNoZGI=">hexo-generator-searchdb<i class="fa fa-external-link-alt"></i></span></li>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by1wYW5ndQ==">hexo-pangu<i class="fa fa-external-link-alt"></i></span></li>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by1maWx0ZXItbWF0aGpheA==">hexo-filter-mathjax<i class="fa fa-external-link-alt"></i></span></li>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by13b3JkLWNvdW50ZXI=">hexo-word-counter<i class="fa fa-external-link-alt"></i></span></li>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by1vcHRpbWl6ZQ==">hexo-optimize<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
-<h3 id="NexT-Plugins"><a href="#NexT-Plugins" class="headerlink" title="NexT Plugins"></a>NexT Plugins</h3><ul>
+<h3 id="next-plugins"><a class="markdownIt-Anchor" href="#next-plugins"></a> NexT Plugins</h3>
+<ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by1uZXh0LXRocmVl">hexo-next-three<i class="fa fa-external-link-alt"></i></span></li>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by1uZXh0LWZpcmV3b3Jrcw==">hexo-next-fireworks<i class="fa fa-external-link-alt"></i></span></li>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by1uZXh0LWV4aWY=">hexo-next-exif<i class="fa fa-external-link-alt"></i></span></li>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by1uZXh0LXZhbGluZQ==">hexo-next-valine<i class="fa fa-external-link-alt"></i></span></li>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by1uZXh0LWdpc2N1cw==">hexo-next-giscus<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
-<hr>
+<hr />
 <ul>
 <li>Visit the <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvYXdlc29tZS1uZXh0">Awesome NexT<i class="fa fa-external-link-alt"></i></span> list for more plugins.</li>
 </ul>
